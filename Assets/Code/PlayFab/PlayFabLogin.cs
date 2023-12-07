@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class PlayFabLogin : MonoBehaviour
 {
     const string TitleId = "C822B";
+    private const string AuthGuidKey = "auth_guid_key";
 
     //public UnityEvent <LoginResult> OnLoginSuccesEvent;
     //public UnityEvent <PlayFabError> OnLoginErrorEvent;
@@ -16,6 +17,8 @@ public class PlayFabLogin : MonoBehaviour
     
     public UnityEvent <string> OnLoginSuccesEvent;
     public UnityEvent <string> OnLoginErrorEvent;
+    private bool _needCreation;
+    private string _id;
 
     private void Start()
     {
@@ -23,6 +26,11 @@ public class PlayFabLogin : MonoBehaviour
         {
             PlayFabSettings.staticSettings.TitleId = TitleId;
         }
+
+        _needCreation = PlayerPrefs.HasKey(AuthGuidKey);
+        _id = PlayerPrefs.GetString(AuthGuidKey, Guid.NewGuid().ToString());
+
+
     }
 
 
@@ -33,11 +41,17 @@ public class PlayFabLogin : MonoBehaviour
 
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = "PlayerTest",
-            CreateAccount = true
+            CustomId = _id,
+            CreateAccount = !_needCreation
         };
 
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSucces, OnLoginError);
+        PlayFabClientAPI.LoginWithCustomID(request, 
+            result =>
+            {
+                PlayerPrefs.SetString(AuthGuidKey, _id);
+                OnLoginSucces(result);
+            },
+            OnLoginError);
     }
 
     private void OnLoginSucces(LoginResult result)
