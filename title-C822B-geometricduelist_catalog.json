@@ -1,0 +1,128 @@
+{
+  "CatalogVersion": "geometricduelist_catalog",
+  "Catalog": [
+    {
+      "ItemId": "One",
+      "ItemClass": null,
+      "CatalogVersion": "geometricduelist_catalog",
+      "DisplayName": "My first item",
+      "Description": null,
+      "VirtualCurrencyPrices": null,
+      "RealCurrencyPrices": null,
+      "Tags": null,
+      "CustomData": null,
+      "Consumable": null,
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "extrabullet_id",
+      "ItemClass": "Resource",
+      "CatalogVersion": "geometricduelist_catalog",
+      "DisplayName": "Extra bullet",
+      "Description": "Allows both players to make an extra shot/ ",
+      "VirtualCurrencyPrices": {
+        "RM": 100,
+        "BC": 50
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "Consumable",
+        "Shooting"
+      ],
+      "CustomData": "{\"Shots\":\"1\"}",
+      "Consumable": {
+        "UsageCount": 10,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "optionalskin_id",
+      "ItemClass": "Skin",
+      "CatalogVersion": "geometricduelist_catalog",
+      "DisplayName": "Optional skin",
+      "Description": "Unlocks optional skin.",
+      "VirtualCurrencyPrices": {
+        "RM": 500,
+        "BC": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "Cosmetics"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "bulletbundle_id",
+      "ItemClass": "Bundle",
+      "CatalogVersion": "geometricduelist_catalog",
+      "DisplayName": "Bullet Bundle",
+      "Description": "Contains 5 bullets.",
+      "VirtualCurrencyPrices": {
+        "RM": 300,
+        "BC": 90
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "Consumable"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "extrabullet_id",
+          "extrabullet_id",
+          "extrabullet_id",
+          "extrabullet_id",
+          "extrabullet_id"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": null
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": []
+}
