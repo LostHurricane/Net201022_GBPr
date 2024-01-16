@@ -14,6 +14,30 @@ public class PlayFabAccountManager : MonoBehaviour
     private void Start()
     {
         PlayFabClientAPI.GetAccountInfo(new GetAccountInfoRequest(), OnGetAccount, OnError);
+        PlayFabClientAPI.GetCatalogItems(new GetCatalogItemsRequest(), OnGetCatalog, OnError);
+        PlayFabServerAPI.GetRandomResultTables(new PlayFab.ServerModels.GetRandomResultTablesRequest(), OnGetTables, OnError);
+
+    }
+
+    private void OnGetTables(PlayFab.ServerModels.GetRandomResultTablesResult result)
+    {
+        Debug.Log("OnGetTables succses");
+    }
+
+    private void OnGetCatalog(GetCatalogItemsResult result)
+    {
+        Debug.Log("GetCatalogItemsRequest succses");
+
+        ShowItems(result.Catalog);
+    }
+
+    private void ShowItems(List<CatalogItem> catalog)
+    {
+       foreach (var item in catalog)
+        {
+            Debug.Log($"Item {item.DisplayName} ID:{item.ItemId} cost {item.RealCurrencyPrices}");
+
+        }
     }
 
     private void OnGetAccount(GetAccountInfoResult result)
