@@ -207,6 +207,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436230091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7140909675390782531, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+  m_PrefabInstance: {fileID: 969884501919418161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1489825088
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +268,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789212022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969884500897165887, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+  m_PrefabInstance: {fileID: 969884501919418161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841127564
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +569,14 @@ PrefabInstance:
       propertyPath: _inputField
       value: 
       objectReference: {fileID: 485769385}
+    - target: {fileID: 282790488, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: _playFabButton
+      value: 
+      objectReference: {fileID: 1789212022}
+    - target: {fileID: 282790488, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: _photonConnectionButton
+      value: 
+      objectReference: {fileID: 1436230091}
     - target: {fileID: 282790489, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
       propertyPath: _login
       value: 
@@ -554,6 +584,22 @@ PrefabInstance:
     - target: {fileID: 74823867828665852, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
       propertyPath: m_GlobalPointSize
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 969884500897165887, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 969884500897165887, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 969884500897165887, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayFabLogin, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 969884500897165887, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 969884501663239524, guid: ebba0721099fe914f8eb2066b8a8b2cd, type: 3}
       propertyPath: m_Pivot.x
