@@ -12,10 +12,6 @@ public class PlayFabLogin : MonoBehaviour
     const string TitleId = "C822B";
     private const string AuthGuidKey = "auth_guid_key";
 
-    //public UnityEvent <LoginResult> OnLoginSuccesEvent;
-    //public UnityEvent <PlayFabError> OnLoginErrorEvent;
-    
-    
     public UnityEvent <string> OnLoginSuccesEvent;
     public UnityEvent <string> OnLoginErrorEvent;
     private bool _needCreation;
@@ -30,7 +26,7 @@ public class PlayFabLogin : MonoBehaviour
 
         _needCreation = PlayerPrefs.HasKey(AuthGuidKey);
         _id = PlayerPrefs.GetString(AuthGuidKey, Guid.NewGuid().ToString());
-
+        Debug.Log($"id {_id}");
 
     }
 
