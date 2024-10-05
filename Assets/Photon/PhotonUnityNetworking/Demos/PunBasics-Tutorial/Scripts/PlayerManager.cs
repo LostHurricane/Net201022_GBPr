@@ -8,6 +8,7 @@
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Lesson7;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -46,6 +47,8 @@ namespace Photon.Pun.Demo.PunBasics
 
         #endregion
 
+        private PlayFabPointsManager _pointsManager;
+
         #region MonoBehaviour CallBacks
 
         /// <summary>
@@ -67,6 +70,7 @@ namespace Photon.Pun.Demo.PunBasics
             if (photonView.IsMine)
             {
                 LocalPlayerInstance = gameObject;
+                _pointsManager = new PlayFabPointsManager();
             }
 
             // #Critical
@@ -175,6 +179,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
             this.Health -= 0.1f;
+            _pointsManager.AddPoints(-1);
         }
 
         /// <summary>
@@ -199,16 +204,18 @@ namespace Photon.Pun.Demo.PunBasics
 
             // we slowly affect health when beam is constantly hitting us, so player has to move to prevent death.
             this.Health -= 0.1f*Time.deltaTime;
+            _pointsManager.AddPoints(-1);
+
         }
 
 
-        #if !UNITY_5_4_OR_NEWER
+#if !UNITY_5_4_OR_NEWER
         /// <summary>See CalledOnLevelWasLoaded. Outdated in Unity 5.4.</summary>
         void OnLevelWasLoaded(int level)
         {
             this.CalledOnLevelWasLoaded(level);
         }
-        #endif
+#endif
 
 
         /// <summary>
