@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class SlotCharacterWidget : MonoBehaviour
 {
+    public Button SlotButton { get => _button; }
+    public bool IsFilled { get; private set; } = false;
+    public string Name => _nameLabel.text;
+
     [SerializeField]
     private Button _button;
 
@@ -24,10 +28,23 @@ public class SlotCharacterWidget : MonoBehaviour
     [SerializeField]
     private TMP_Text _goldLabel;
 
-    public Button SlotButton { get => _button; }
+    public void SetName(string name)
+    {
+        _nameLabel.text = $"Name: {name}";
+    }
+
+    public void SetStats(string level, string gold)
+    {
+        _levelLabel.text = $"Level: {level}";
+        _goldLabel.text = $"Gold: {gold}";
+        _infoCharacterSlot.SetActive(true);
+        _emptySlot.SetActive(false);
+    }
 
     public void ShowInfoCharacterSlot(string name, string level, string gold)
     {
+        IsFilled = true;
+
         _nameLabel.text = $"Name: {name}";
         _levelLabel.text = $"Level: {level}";
         _goldLabel.text = $"Gold: {gold}";
@@ -38,6 +55,7 @@ public class SlotCharacterWidget : MonoBehaviour
 
     public void ShowEmptySlot()
     {
+        IsFilled = false;
         _infoCharacterSlot.SetActive(false);
         _emptySlot.SetActive(true);
     }

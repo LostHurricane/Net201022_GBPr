@@ -119,27 +119,37 @@ public class PlayFabAccountManager : MonoBehaviour
         }
         else if (characters.Count <= _slots.Count)
         {
-            var charactersStats = new List<GetCharacterStatisticsResult>();
             for (int i = 0; i < characters.Count; i++)
             {
+                var currentSlot = _slots[i];
+                var character = characters[i];
+                
                 PlayFabClientAPI.GetCharacterStatistics(new GetCharacterStatisticsRequest
                 {
-                    CharacterId = characters[i].CharacterId,
+                    CharacterId = character.CharacterId,
                 },
                 result =>
                 {
-                    charactersStats.Add(result);
-                    
-                }, OnError);
-            }
-            for (var i = 0; i < charactersStats.Count; i++ )
-            {
+                    var level = result.CharacterStatistics["Level"].ToString();
+                    var gold = result.CharacterStatistics["Gold"].ToString();
+                    var slot = _slots.First(s => !s.IsFilled);
+                    slot.ShowInfoCharacterSlot( character.CharacterName, level, gold);
 
-                var level = charactersStats[i].CharacterStatistics["Level"].ToString();
-                var gold = charactersStats[i].CharacterStatistics["Gold"].ToString();
-                Debug.Log($"Loaded {characters[i].CharacterName} with {level} level and {gold} gold");
-                _slots[i].ShowInfoCharacterSlot(characters[i].CharacterName, level, gold);
+                    if (i == characters.Count)
+                    {
+                        foreach (var cSlot in _slots)
+                        {
+                            if (!cSlot.IsFilled)
+                            {
+                                cSlot.ShowEmptySlot();
+                            }
+                        }
+                    }
+                }, OnError);
+
             }
+
+            
 
             //if (characters.Count != _slots.Count)
             //{
