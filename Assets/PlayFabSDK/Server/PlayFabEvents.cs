@@ -31,6 +31,8 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<DeleteCharacterFromUserResult> OnServerDeleteCharacterFromUserResultEvent;
         public event PlayFabRequestEvent<DeletePlayerRequest> OnServerDeletePlayerRequestEvent;
         public event PlayFabResultEvent<DeletePlayerResult> OnServerDeletePlayerResultEvent;
+        public event PlayFabRequestEvent<DeletePlayerCustomPropertiesRequest> OnServerDeletePlayerCustomPropertiesRequestEvent;
+        public event PlayFabResultEvent<DeletePlayerCustomPropertiesResult> OnServerDeletePlayerCustomPropertiesResultEvent;
         public event PlayFabRequestEvent<DeletePushNotificationTemplateRequest> OnServerDeletePushNotificationTemplateRequestEvent;
         public event PlayFabResultEvent<DeletePushNotificationTemplateResult> OnServerDeletePushNotificationTemplateResultEvent;
         public event PlayFabRequestEvent<DeleteSharedGroupRequest> OnServerDeleteSharedGroupRequestEvent;
@@ -73,6 +75,8 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<GetLeaderboardForUsersCharactersResult> OnServerGetLeaderboardForUserCharactersResultEvent;
         public event PlayFabRequestEvent<GetPlayerCombinedInfoRequest> OnServerGetPlayerCombinedInfoRequestEvent;
         public event PlayFabResultEvent<GetPlayerCombinedInfoResult> OnServerGetPlayerCombinedInfoResultEvent;
+        public event PlayFabRequestEvent<GetPlayerCustomPropertyRequest> OnServerGetPlayerCustomPropertyRequestEvent;
+        public event PlayFabResultEvent<GetPlayerCustomPropertyResult> OnServerGetPlayerCustomPropertyResultEvent;
         public event PlayFabRequestEvent<GetPlayerProfileRequest> OnServerGetPlayerProfileRequestEvent;
         public event PlayFabResultEvent<GetPlayerProfileResult> OnServerGetPlayerProfileResultEvent;
         public event PlayFabRequestEvent<GetPlayersSegmentsRequest> OnServerGetPlayerSegmentsRequestEvent;
@@ -97,8 +101,12 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<GetPlayFabIDsFromNintendoSwitchDeviceIdsResult> OnServerGetPlayFabIDsFromNintendoSwitchDeviceIdsResultEvent;
         public event PlayFabRequestEvent<GetPlayFabIDsFromPSNAccountIDsRequest> OnServerGetPlayFabIDsFromPSNAccountIDsRequestEvent;
         public event PlayFabResultEvent<GetPlayFabIDsFromPSNAccountIDsResult> OnServerGetPlayFabIDsFromPSNAccountIDsResultEvent;
+        public event PlayFabRequestEvent<GetPlayFabIDsFromPSNOnlineIDsRequest> OnServerGetPlayFabIDsFromPSNOnlineIDsRequestEvent;
+        public event PlayFabResultEvent<GetPlayFabIDsFromPSNOnlineIDsResult> OnServerGetPlayFabIDsFromPSNOnlineIDsResultEvent;
         public event PlayFabRequestEvent<GetPlayFabIDsFromSteamIDsRequest> OnServerGetPlayFabIDsFromSteamIDsRequestEvent;
         public event PlayFabResultEvent<GetPlayFabIDsFromSteamIDsResult> OnServerGetPlayFabIDsFromSteamIDsResultEvent;
+        public event PlayFabRequestEvent<GetPlayFabIDsFromSteamNamesRequest> OnServerGetPlayFabIDsFromSteamNamesRequestEvent;
+        public event PlayFabResultEvent<GetPlayFabIDsFromSteamNamesResult> OnServerGetPlayFabIDsFromSteamNamesResultEvent;
         public event PlayFabRequestEvent<GetPlayFabIDsFromTwitchIDsRequest> OnServerGetPlayFabIDsFromTwitchIDsRequestEvent;
         public event PlayFabResultEvent<GetPlayFabIDsFromTwitchIDsResult> OnServerGetPlayFabIDsFromTwitchIDsResultEvent;
         public event PlayFabRequestEvent<GetPlayFabIDsFromXboxLiveIDsRequest> OnServerGetPlayFabIDsFromXboxLiveIDsRequestEvent;
@@ -163,6 +171,10 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<LinkSteamIdResult> OnServerLinkSteamIdResultEvent;
         public event PlayFabRequestEvent<LinkXboxAccountRequest> OnServerLinkXboxAccountRequestEvent;
         public event PlayFabResultEvent<LinkXboxAccountResult> OnServerLinkXboxAccountResultEvent;
+        public event PlayFabRequestEvent<ListPlayerCustomPropertiesRequest> OnServerListPlayerCustomPropertiesRequestEvent;
+        public event PlayFabResultEvent<ListPlayerCustomPropertiesResult> OnServerListPlayerCustomPropertiesResultEvent;
+        public event PlayFabRequestEvent<LoginWithPSNRequest> OnServerLoginWithPSNRequestEvent;
+        public event PlayFabResultEvent<ServerLoginResult> OnServerLoginWithPSNResultEvent;
         public event PlayFabRequestEvent<LoginWithServerCustomIdRequest> OnServerLoginWithServerCustomIdRequestEvent;
         public event PlayFabResultEvent<ServerLoginResult> OnServerLoginWithServerCustomIdResultEvent;
         public event PlayFabRequestEvent<LoginWithSteamIdRequest> OnServerLoginWithSteamIdRequestEvent;
@@ -251,6 +263,8 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<UpdateCharacterDataResult> OnServerUpdateCharacterReadOnlyDataResultEvent;
         public event PlayFabRequestEvent<UpdateCharacterStatisticsRequest> OnServerUpdateCharacterStatisticsRequestEvent;
         public event PlayFabResultEvent<UpdateCharacterStatisticsResult> OnServerUpdateCharacterStatisticsResultEvent;
+        public event PlayFabRequestEvent<UpdatePlayerCustomPropertiesRequest> OnServerUpdatePlayerCustomPropertiesRequestEvent;
+        public event PlayFabResultEvent<UpdatePlayerCustomPropertiesResult> OnServerUpdatePlayerCustomPropertiesResultEvent;
         public event PlayFabRequestEvent<UpdatePlayerStatisticsRequest> OnServerUpdatePlayerStatisticsRequestEvent;
         public event PlayFabResultEvent<UpdatePlayerStatisticsResult> OnServerUpdatePlayerStatisticsResultEvent;
         public event PlayFabRequestEvent<UpdateSharedGroupDataRequest> OnServerUpdateSharedGroupDataRequestEvent;

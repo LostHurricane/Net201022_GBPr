@@ -15,11 +15,13 @@ MonoBehaviour:
   TitleId: C822B
   DeveloperSecretKey: 8U5M4SAWIPS1ZXQFXTE1KIUZJ5UKB4MD5FAGAOR4TIBWQ8OYHA
   ProductionEnvironmentUrl: 
-  RequestType: 0
+  RequestType: 2
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000
   RequestKeepAlive: 1
+  CompressResponses: 0
+  DecompressWithDownloadHandler: 1
   LogLevel: 12
   LoggerHost: 
   LoggerPort: 0

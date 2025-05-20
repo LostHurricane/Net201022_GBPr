@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PlayFabScene.unity
     guid: 0d21360b8dab87a4883d2bc041971bf2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/InGameScene.unity
     guid: d363f2897e082e844905913e0bf274a4
   - enabled: 0
@@ -54,10 +54,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/SlotCar-Scene.unity
     guid: 711b38c07f2cf904f81b3422c67f1825
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AccountManagement.unity
     guid: 235f92b5a814d9b44bbebd20a5e78ae8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Photon.unity
     guid: 69de1e0189808904ba6f782ab5734511
   m_configObjects: {}
